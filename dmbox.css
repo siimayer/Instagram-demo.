@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+.dm-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow: hidden;
+}
+.dm-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 18px;
+  background: #fff;
+}
+.dm-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f7f7f7;
+}
+.dm-message {
+  max-width: 70%;
+  padding: 10px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+.dm-message.me {
+  background: #3897f0;
+  color: #fff;
+  align-self: flex-end;
+}
+.dm-input-area {
+  display: flex;
+  border-top: 1px solid #eee;
+  background: #fff;
+  padding: 10px;
+}
+.dm-input-area input {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: #f0f0f0;
+  outline: none;
+}
+.dm-input-area button {
+  background: #3897f0;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  }
+
+

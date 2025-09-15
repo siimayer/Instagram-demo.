@@ -1,0 +1,154 @@
+/* Genel */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Ekran */
+.screen {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Durum çubuğu */
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #ccc;
+}
+.statusbar .right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.statusbar .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* Başlık */
+header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #222;
+}
+header .back {
+  padding-right: 12px;
+}
+header .title {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Arama */
+.search {
+  padding: 10px 12px;
+}
+.search .bar {
+  display: flex;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+/* Bölüm başlığı */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #aaa;
+  margin: 16px 12px 6px;
+}
+
+/* Liste */
+.list {
+  background: #000;
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #1c1c1c;
+}
+.row:last-child {
+  border-bottom: none;
+}
+.row .icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 12px;
+}
+.row .content {
+  flex: 1;
+}
+.row .title-lg {
+  font-size: 15px;
+  font-weight: 500;
+}
+.row .subtitle {
+  font-size: 12px;
+  color: #aaa;
+}
+.row .chev {
+  font-size: 20px;
+  color: #888;
+}
+
+/* Alt menü */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  border-top: 1px solid #222;
+  background: #000;
+}
+.tabbar .wrap {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+.tab {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #333;
+  position: relative;
+}
+.tab .badge {
+  width: 6px;
+  height: 6px;
+  background: #f33;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}

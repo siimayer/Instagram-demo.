@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+.like-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+.like-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #222;
+}
+.like-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.like-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.like-user:last-child {
+  border-bottom: none;
+}
+.like-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+.like-user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.like-user-info {
+  font-size: 13px;
+  color: #888;
+}
+.like-user button {
+  margin-left: auto;
+  background: #c2c4c5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  
+}
+.like-user button:hover {
+  background: #c2c4c5;
+}
+
+footer {
+  position: sticky;       /* Sayfa kayarken sabit */
+  bottom: 0;              /* En alta yapış */
+  background: #fff;
+  display: flex;
+  justify-content: center; /* Eşit aralıklarla ikonlar */
+  gap: 32px;
+  padding: 10px 0;
+  
+}
+
+footer img {
+  width: 24px;
+}
+  

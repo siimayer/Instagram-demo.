@@ -1,0 +1,296 @@
+/* Reset ve temel stiller */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #262626;
+}
+
+.app {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Header */
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #262626;
+  text-decoration: none;
+}
+
+.back-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.comments-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.share-btn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.share-btn:hover {
+  color: #1877f2;
+}
+
+/* Original Post Preview */
+.original-post {
+  padding: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+.post-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.post-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 2px;
+}
+
+.post-info p {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+/* Comments List */
+.comments-list {
+  background: #fff;
+  padding-bottom: 80px;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 12px;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-header {
+  margin-bottom: 4px;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+  margin-right: 4px;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #262626;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.time {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.like-count {
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.like-count:hover {
+  color: #262626;
+}
+
+.reply-btn {
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.reply-btn:hover {
+  color: #262626;
+}
+
+.comment-like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #8e8e8e;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.comment-like:hover {
+  color: #ed4956;
+}
+
+.comment-like svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Add Comment Section */
+.add-comment-section {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  padding: 12px 16px;
+}
+
+.comment-input-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.comment-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #262626;
+  background: none;
+  padding: 8px 0;
+}
+
+.comment-input::placeholder {
+  color: #8e8e8e;
+}
+
+.post-btn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.post-btn:not(:disabled) {
+  opacity: 1;
+}
+
+.post-btn:hover:not(:disabled) {
+  color: #1877f2;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 10px 0;
+  border-top: 1px solid #dbdbdb;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+}
+
+footer a:hover img {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+

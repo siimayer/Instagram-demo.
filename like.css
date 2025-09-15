@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+.like-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+.like-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #222;
+}
+.like-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.like-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.like-user:last-child {
+  border-bottom: none;
+}
+.like-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+.like-user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.like-user-info {
+  font-size: 13px;
+  color: #888;
+}
+.like-user button {
+  margin-left: auto;
+  background: #3897f0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.like-user button:hover {
+  background: #2176c1;
+}
+
+footer {
+  position: sticky;       /* Sayfa kayarken sabit */
+  bottom: 0;              /* En alta yapış */
+  background: #fff;
+  display: flex;
+  justify-content: center; /* Eşit aralıklarla ikonlar */
+  gap: 32px;
+  padding: 10px 0;
+  
+}
+
+footer img {
+  width: 24px;
+}
+  li, .user, .list, .item{
+  border-top: none;
+  border-bottom: none
+}
+hr {
+  display: none;
+}
+.like-user button {
+  transition: all 0.2s ease;
+}
+.like-user button.followed {
+  background-color: #e6e6e6;
+  color: #555;
+  border-color: #ddd;
+  cursor: default;
+  opacity: 0.9;
+}
+.follow-btn {
+  background: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.follow-btn::before {
+  content: attr(data-default);
+}
+.follow-btn:hover::before {
+  content: attr(data-hover);
+}
+.like-user .follow-btn:hover {
+  background: #1877f2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+

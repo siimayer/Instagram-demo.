@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;              /* Tüm öğelerin genişliğine padding ve border'ı dahil eder */
+  margin: 0;                            /* Varsayılan dış boşlukları sıfırlar */
+  padding: 0;                        /* Varsayılan iç boşlukları sıfırlar */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;   /* Sayfa yazı tiplerini belirler */
+  background: #fafafa;                          /* Sayfa arka plan rengini açık gri yapar */
+  color: #111;                        /* Genel yazı rengini koyu gri/siyah yapar */
+}
+
+/* ANA KUTU */
+.explore-container {
+  max-width: 950px;          /* Sayfa genişliğini en fazla 950px ile sınırlar */
+  margin: 20px auto;       /* Ortalar ve üst-alt boşluk verir */
+  background: #fff;        /* Arka plan rengini beyaz yapar */
+  border-radius: 12px;    /* Köşeleri hafif yuvarlatır */
+  overflow: hidden;          /* İçerik kutudan taşarsa gizler */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);    /* Hafif gölge ekler */
+}
+
+/* ÜST BAR (başlık kısmı) */
+.top-bar {
+  display: flex;                                /* İçeriği yan yana dizer */
+  justify-content: space-between;               /* İçerikleri sağa ve sola yayar */
+  align-items: center;                          /* Dikeyde ortalar */
+  padding: 14px 18px;                           /* İç boşluk ekler */
+  border-bottom: 1px solid #ececec;           /* Alt çizgi ekler */
+}
+
+.icon {
+  width: 22px;                                  /* İkon genişliği */
+  height: 22px;                                 /* İkon yüksekliği */
+}
+
+/* ARAMA VE FİLTRELER BÖLÜMÜ */
+.search-section {
+  padding: 14px 18px;                           /* İç boşluk ekler */
+  border-bottom: 1px solid #f0f0f0;             /* Alt çizgi ekler */
+}
+
+.search-box {
+  width: 100%;                                  /* Genişliği tamamen kaplar */
+  padding: 10px 12px;                           /* İç boşluk ekler */
+  border-radius: 22px;                          /* Oval kenar yapar */
+  border: 1px solid #ebebeb;                    /* kenarlık ekler */
+  background: #f7f7f7;                          /* arka plan */
+  font-size: 14px;                              /* Yazı boyutu */
+}
+
+.filters {
+  display: flex;                                /* Yan yana dizilim */
+  gap: 8px;                                     /* Aralarındaki boşluk */
+  margin-top: 12px;                             /* Üstten boşluk */
+}
+
+.pill {
+  padding: 8px 12px;                            /* İç boşluk */
+  border-radius: 18px;                          /* Oval kenar */
+  background: #fff;                             /* Beyaz arka plan */
+  border: 1px solid #eee;                       /* Açık gri kenarlık */
+  font-size: 13px;                              /* Yazı boyutu */
+  cursor: pointer;                              /* Fare üzerine gelince el işareti */
+}
+
+/* GALERİ ALANI (fotoğraf grid yapısı) */
+.gallery {
+  display: grid;                                /* Grid düzenini kullanır */
+  grid-template-columns: repeat(3, 1fr);        /* 3 sütun oluşturur */
+  grid-auto-rows: 180px;                        /* Varsayılan satır yüksekliğini 180px yapar */
+  gap: 16px;                                    /* Hücreler arası boşluk */
+  padding: 18px;                                /* Galeri etrafına boşluk ekler */
+}
+
+.item {
+  overflow: hidden;                             /* Görsel taşarsa keser */
+  border-radius: 12px;                          /* Köşeleri yuvarlatır */
+  background: #ddd;                           /* Görsel yüklenmezse gri arka plan */
+}
+
+.item img {
+  width: 100%;                                  /* Genişliği tamamen kaplar */
+  height: 100%;                                 /* Yüksekliği tamamen kaplar */
+  object-fit: cover;                            /* Görseli kırpmadan alanı doldurur */
+}
+
+.tall {
+  grid-row: span 2;                             /* dikeyde 2 satır kaplayacak şekilde cell'leri birleştirir */
+}
+
+.wide {
+  grid-column: span 2;                          /* yatayda 2 sütun kaplayacak şekilde cell'leri birleştirir */
+}
+
+/* Alt menü */
+footer {
+  position: sticky;       /* Sayfa kayarken sabit */
+  bottom: 0;              /* En alta yapış */
+  background: #fff;
+  display: flex;
+  justify-content: center; /* Eşit aralıklarla ikonlar */
+  gap: 32px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;    /* Üst çizgi */
+}
+
+footer img {
+  width: 24px;
+}
