@@ -51,19 +51,38 @@ body {
   font-size: 13px;
   color: #888;
 }
-.like-user button {
+.follow-container {
   margin-left: auto;
-  background: #3897f0;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 18px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.2s;
 }
-.like-user button:hover {
-  background: #2176c1;
+
+.follow-container input {
+  display: none; 
+}
+
+.follow-container label {
+  display: inline-block;
+  background-color: #0095f6;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.follow-container label:hover {
+  background-color: #1877f2;
+}
+.follow-container label::after {
+  content: "Takip Et";
+}
+.follow-container input:checked + label {
+  background-color: #e6e6e6;
+  color: #333;
+  cursor: default;
+}
+.follow-container input:checked + label::after {
+  content: "İstek Gönderildi";
 }
 
 footer {
@@ -80,42 +99,3 @@ footer {
 footer img {
   width: 24px;
 }
-  li, .user, .list, .item{
-  border-top: none;
-  border-bottom: none
-}
-hr {
-  display: none;
-}
-.like-user button {
-  transition: all 0.2s ease;
-}
-.like-user button.followed {
-  background-color: #e6e6e6;
-  color: #555;
-  border-color: #ddd;
-  cursor: default;
-  opacity: 0.9;
-}
-.follow-btn {
-  background: #0095f6;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
-}
-.follow-btn::before {
-  content: attr(data-default);
-}
-.follow-btn:hover::before {
-  content: attr(data-hover);
-}
-.like-user .follow-btn:hover {
-  background: #1877f2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
-}
-
