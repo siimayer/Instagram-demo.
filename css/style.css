@@ -419,15 +419,21 @@ a {
   margin-top: 4px;
 }
 
-.comment-heart-toggle {
-  display: none;
+/* Kalp Toggle */
+.heart-toggle + .permanent-heart::before {
+  content: "🤍";
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: inline-block;
 }
 
-.comment-heart-toggle:checked + .permanent-heart::before {
+.heart-toggle:checked + .permanent-heart::before {
   content: "❤️";
   transform: scale(1.3);
   filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.5));
 }
+
 
 .add-comment-section {
   position: fixed;
